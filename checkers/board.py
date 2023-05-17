@@ -13,8 +13,10 @@ square = width // cols
 class Board:
     def __init__(self):
         self.board = []
-        self.red_left = self.white_left = 12
-        self.red_kings = self.white_kings = 0
+        self.red_left = 12
+        self.white_left = 12
+        self.red_kings = 0
+        self.white_kings = 0
         self.create_board()
 
     def draw_squares(self, win):
@@ -93,9 +95,9 @@ class Board:
 
     def winner(self):
         if self.red_left <= 0:
-            return WHITE
+            return "WHITE WIN!!!"
         elif self.white_left <= 0:
-            return RED
+            return "RED WIN!!!"
 
         return None
 

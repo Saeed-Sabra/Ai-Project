@@ -1,6 +1,6 @@
 import pygame
 
-GREY = (128, 128, 128)
+
 cols = 8
 width = 800
 square = width // cols
@@ -8,8 +8,7 @@ crown = pygame.transform.scale(pygame.image.load("checkers/crown.png"), (44, 25)
 
 
 class Piece:
-    PADDING = 15
-    OUTLINE = 2
+    pad = 13
 
     def __init__(self, row, col, color):
         self.row = row
@@ -28,9 +27,7 @@ class Piece:
         self.king = True
 
     def draw(self, win):
-        radius = square // 2 - self.PADDING
-        pygame.draw.circle(win, GREY, (self.x, self.y), radius + self.OUTLINE)
-        pygame.draw.circle(win, self.color, (self.x, self.y), radius)
+        pygame.draw.circle(win, self.color, (self.x, self.y), square // 2 - self.pad)
         if self.king:
             win.blit(
                 crown,
