@@ -18,6 +18,7 @@ def minimax(position, depth, max_player, game):
                 best_move = move
 
         return maxEval, best_move
+
     else:
         minEval = float("inf")
         best_move = None

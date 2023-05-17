@@ -67,7 +67,6 @@ class Game:
                 BLUE,
                 (
                     col * square + square // 2,
-                    
                     row * square + square // 2,
                 ),
                 15,

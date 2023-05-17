@@ -13,8 +13,8 @@ pygame.display.set_caption("Checkers")
 deff = input("Enter Game Difficulty from 1 to 5 (1 easy, 5 Hard): ")
 
 
-def get_row_col_from_mouse(pos):
-    x, y = pos
+def get_row_col_from_mouse(position):
+    x, y = position
     row = y // square
     col = x // square
     return row, col
