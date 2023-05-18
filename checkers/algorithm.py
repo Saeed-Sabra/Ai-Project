@@ -51,3 +51,6 @@ def get_all_moves(board, color, game):
             moves.append(new_board)
 
     return moves
+
+
+

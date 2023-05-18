@@ -13,7 +13,7 @@ pygame.display.set_caption("Checkers")
 # deff = input("Enter Game Difficulty from 1 to 5 (1 easy, 5 Hard): ")
 
 
-def get_from_mouse(position):
+def get_row_col_from_mouse(position):
     x, y = position
     row = y // square
     col = x // square
@@ -38,7 +38,7 @@ def main():
 
             if event.type == pygame.MOUSEBUTTONDOWN:
                 pos = pygame.mouse.get_pos()
-                row, col = get_from_mouse(pos)
+                row, col = get_row_col_from_mouse(pos)
                 game.select(row, col)
 
         game.update()

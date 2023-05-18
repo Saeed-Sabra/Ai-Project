@@ -53,6 +53,7 @@ class Board:
 
         if row == rows - 1 or row == 0:
             piece.make_king()
+
         else:
             if piece.color == WHITE:
                 self.white_kings += 1
@@ -95,9 +96,9 @@ class Board:
 
     def winner(self):
         if self.red_left <= 0:
-            return "WHITE WIN!!!"
+            return WHITE
         elif self.white_left <= 0:
-            return "RED WIN!!!"
+            return RED
 
         return None
 

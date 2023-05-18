@@ -14,6 +14,7 @@ class Game:
         self._init()
         self.win = win
 
+
     def update(self):
         self.board.draw(self.win)
         self.draw_valid_moves(self.valid_moves)
@@ -43,7 +44,7 @@ class Game:
             self.selected = piece
             self.valid_moves = self.board.get_valid_moves(piece)
             return True
-
+        
         return False
 
     def _move(self, row, col):
